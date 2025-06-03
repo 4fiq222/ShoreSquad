@@ -199,6 +199,8 @@ main {
   border: none;
   border-radius: 8px;
   padding: 0.7rem 0;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
@@ -263,6 +265,61 @@ footer {
     color: var(--charcoal);
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
+}
+
+.weather-section {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 960px;
+}
+
+.weather-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.weather-card {
+  background: #e3f2fd;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 150px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter {
+  padding: 0.6rem 1.4rem;
+  border: 2px solid var(--blue);
+  background: white;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filter:hover {
+  background: var(--blue);
+  color: white;
+  border-color: var(--blue);
+}
+
+.filter.active {
+  background: var(--blue);
+  color: white;
+  border-color: var(--blue);
+  box-shadow: 0 4px 10px rgba(33, 150, 243, 0.3);
 }
 
 @media (max-width: 900px) {

@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>ShoreSquad</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;500;400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShoreSquad</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;500;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-logo">
-            <img src="https://img.icons8.com/ios-filled/50/2196F3/waves.png" alt="ShoreSquad Logo" class="logo-img" />
-            <span class="brand">ShoreSquad</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#" class="active">Map</a></li>
-            <li><a href="#">My Crew</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section class="stats">
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="https://img.icons8.com/ios-filled/50/2196F3/waves.png" alt="ShoreSquad Logo" class="logo-img" />
+      <span class="brand">ShoreSquad</span>
+    </div>
+    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#map">Map</a></li>
+      <li><a href="#">My Crew</a></li>
+    </ul>
+    <button id="theme-toggle">🌙</button>
+  </nav>
+
+  <main>
+    <section class="stats">
             <div class="stat-card">
                 <span class="stat-icon"><img src="https://img.icons8.com/ios-filled/30/fa314a/trash.png" alt="Pounds Collected"></span>
                 <div class="stat-value">2500</div>
@@ -40,8 +43,83 @@
                 <div class="stat-label">Squad Members</div>
             </div>
         </section>
-        <section class="map-section">
-            <h2>Next Cleanup Location</h2>
+    <section id="events" class="upcoming fade-in">
+      <h2>Upcoming Beach Cleanups</h2>
+      <div class="filter-buttons">
+        <button class="filter active">All Events</button>
+        <button class="filter">This Weekend</button>
+        <button class="filter">Near Me</button>
+        <button class="filter">Beginner Friendly</button>
+      </div>
+      <div class="cleanup-cards">
+        <div class="cleanup-card">
+          <div class="cleanup-header">
+            <h3>Santa Monica Sunrise Cleanup</h3>
+            <span class="tag beginner">Beginner</span>
+          </div>
+          <p>📅 7 Jun at 07:00</p>
+          <p>📍 Santa Monica Beach</p>
+          <p>👥 Ocean Guardians</p>
+          <p>Join us for an early morning beach cleanup with coffee and pastries!</p>
+          <div class="spots">28/50 <span>22 spots left</span></div>
+          <button class="join-btn">Join Event</button>
+        </div>
+
+        <div class="cleanup-card">
+          <div class="cleanup-header">
+            <h3>Malibu Surfrider Cleanup</h3>
+            <span class="tag intermediate">Intermediate</span>
+          </div>
+          <p>📅 8 Jun at 09:00</p>
+          <p>📍 Surfrider Beach, Malibu</p>
+          <p>👥 Surf & Clean</p>
+          <p>Protect the waves we love! Equipment provided.</p>
+          <div class="spots">45/60 <span>15 spots left</span></div>
+          <button class="join-btn">Join Event</button>
+        </div>
+
+        <div class="cleanup-card">
+          <div class="cleanup-header">
+            <h3>Manhattan Beach Family Day</h3>
+            <span class="tag beginner">Beginner</span>
+          </div>
+          <p>📅 14 Jun at 10:00</p>
+          <p>📍 Manhattan Beach</p>
+          <p>👥 Beach Families United</p>
+          <p>Family-friendly cleanup with activities for kids!</p>
+          <div class="spots">67/100 <span>33 spots left</span></div>
+          <button class="join-btn">Join Event</button>
+        </div>
+
+        <div class="cleanup-card">
+          <div class="cleanup-header">
+            <h3>Venice Beach Squad Action</h3>
+            <span class="tag intermediate">Intermediate</span>
+          </div>
+          <p>📅 15 Jun at 08:30</p>
+          <p>📍 Venice Beach Boardwalk</p>
+          <p>👥 Venice Eco Warriors</p>
+          <p>Clean up the vibrant boardwalk. Gloves and bags provided.</p>
+          <div class="spots">32/50 <span>18 spots left</span></div>
+          <button class="join-btn">Join Event</button>
+        </div>
+
+        <div class="cleanup-card">
+          <div class="cleanup-header">
+            <h3>Laguna Coastal Sweep</h3>
+            <span class="tag advanced">Advanced</span>
+          </div>
+          <p>📅 18 Jun at 06:00</p>
+          <p>📍 Laguna Beach</p>
+          <p>👥 Coastal Cleanup Pros</p>
+          <p>Early morning rugged terrain sweep for experienced volunteers.</p>
+          <div class="spots">22/30 <span>8 spots left</span></div>
+          <button class="join-btn">Join Event</button>
+        </div>
+      </div>
+    </section>
+    <section id="map" class="map-section">
+        <h2>Next Cleanup Location</h2>
             <div class="map-container">
                 <iframe
                     width="100%"
@@ -53,64 +131,50 @@
                     src="https://www.google.com/maps?q=1.381497,103.955574&z=17&output=embed">
                 </iframe>
             </div>
-        </section>
-        <section class="upcoming">
-            <h2>Upcoming Cleanups</h2>
-            <div class="cleanup-cards">
-                <div class="cleanup-card">
-                    <div class="cleanup-date">Jun 1</div>
-                    <div class="cleanup-title">Santa Monica Beach Cleanup</div>
-                    <div class="cleanup-location"><img src="https://img.icons8.com/ios-filled/16/2196F3/marker.png" alt="Location"> Santa Monica Pier</div>
-                    <div class="cleanup-time"><img src="https://img.icons8.com/ios-filled/16/2196F3/clock.png" alt="Time"> 09:00 AM</div>
-                    <div class="cleanup-members">
-                        <span class="member-badge" style="background:#2196F3;">A</span>
-                        <span class="member-badge" style="background:#26D7AE;">B</span>
-                        <span class="member-badge" style="background:#FFD600;">C</span>
-                        <span class="member-badge" style="background:#F5E9DA;color:#222831;">+18</span>
-                    </div>
-                    <div class="cleanup-squad">12 squad members</div>
-                    <button class="join-btn">Join Squad</button>
-                </div>
-                <div class="cleanup-card">
-                    <div class="cleanup-date">Jun 3</div>
-                    <div class="cleanup-title">Venice Beach Squad Action</div>
-                    <div class="cleanup-location"><img src="https://img.icons8.com/ios-filled/16/2196F3/marker.png" alt="Location"> Venice Beach Boardwalk</div>
-                    <div class="cleanup-time"><img src="https://img.icons8.com/ios-filled/16/2196F3/clock.png" alt="Time"> 08:30 AM</div>
-                    <div class="cleanup-members">
-                        <span class="member-badge" style="background:#2196F3;">A</span>
-                        <span class="member-badge" style="background:#26D7AE;">B</span>
-                        <span class="member-badge" style="background:#FFD600;">C</span>
-                        <span class="member-badge" style="background:#F5E9DA;color:#222831;">+4</span>
-                    </div>
-                    <div class="cleanup-squad">8 squad members</div>
-                    <button class="join-btn">Join Squad</button>
-                </div>
-                <div class="cleanup-card">
-                    <div class="cleanup-date">Jun 7</div>
-                    <div class="cleanup-title">Malibu Coast Conservation</div>
-                    <div class="cleanup-location"><img src="https://img.icons8.com/ios-filled/16/2196F3/marker.png" alt="Location"> Malibu State Beach</div>
-                    <div class="cleanup-time"><img src="https://img.icons8.com/ios-filled/16/2196F3/clock.png" alt="Time"> 07:00 AM</div>
-                    <div class="cleanup-members">
-                        <span class="member-badge" style="background:#2196F3;">A</span>
-                        <span class="member-badge" style="background:#26D7AE;">B</span>
-                        <span class="member-badge" style="background:#FFD600;">C</span>
-                        <span class="member-badge" style="background:#F5E9DA;color:#222831;">+11</span>
-                    </div>
-                    <div class="cleanup-squad">15 squad members</div>
-                    <button class="join-btn">Join Squad</button>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <nav class="footer-nav">
-            <a href="#" class="footer-link active"><img src="https://img.icons8.com/ios-filled/24/2196F3/home.png" alt="Home"><span>Home</span></a>
-            <a href="#" class="footer-link"><img src="https://img.icons8.com/ios-filled/24/2196F3/calendar.png" alt="Events"><span>Events</span></a>
-            <a href="#" class="footer-link"><img src="https://img.icons8.com/ios-filled/24/2196F3/map.png" alt="Map"><span>Map</span></a>
-            <a href="#" class="footer-link"><img src="https://img.icons8.com/ios-filled/24/2196F3/conference-call.png" alt="Squad"><span>Squad</span></a>
-        </nav>
-        <p>&copy; 2024 ShoreSquad. Eco-action made fun.</p>
-    </footer>
-    <script src="js/app.js"></script>
+    <section class="weather-section fade-in">
+    <h2>4-Day Weather Forecast (Pasir Ris)</h2>
+    <div id="weather-container" class="weather-grid">
+        <div class="weather-card">
+        <strong>2025-06-03</strong>
+        <p>Max: 31.7°C</p>
+        <p>Min: 27.5°C</p>
+        <p>Rain: 0.9 mm</p>
+        </div>
+        <div class="weather-card">
+        <strong>2025-06-04</strong>
+        <p>Max: 31.7°C</p>
+        <p>Min: 27.2°C</p>
+        <p>Rain: 0.1 mm</p>
+        </div>
+        <div class="weather-card">
+        <strong>2025-06-05</strong>
+        <p>Max: 31°C</p>
+        <p>Min: 27.4°C</p>
+        <p>Rain: 4.2 mm</p>
+        </div>
+        <div class="weather-card">
+        <strong>2025-06-06</strong>
+        <p>Max: 31.3°C</p>
+        <p>Min: 27.5°C</p>
+        <p>Rain: 3.1 mm</p>
+        </div>
+    </div>
+    </section>
+    </div>
+  </main>
+
+  <footer>
+    <nav class="footer-nav">
+      <a href="#" class="footer-link active"><img src="https://img.icons8.com/ios-filled/24/2196F3/home.png" alt="Home"><span>Home</span></a>
+      <a href="#" class="footer-link"><img src="https://img.icons8.com/ios-filled/24/2196F3/calendar.png" alt="Events"><span>Events</span></a>
+      <a href="#" class="footer-link"><img src="https://img.icons8.com/ios-filled/24/2196F3/map.png" alt="Map"><span>Map</span></a>
+      <a href="#" class="footer-link"><img src="https://img.icons8.com/ios-filled/24/2196F3/conference-call.png" alt="Squad"><span>Squad</span></a>
+    </nav>
+    <p>&copy; 2024 ShoreSquad. Eco-action made fun.</p>
+  </footer>
+
+  <div class="fab">+</div>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
